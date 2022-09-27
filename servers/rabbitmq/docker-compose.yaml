@@ -5,10 +5,10 @@ services:
     image: rabbitmq:3-management
     hostname: my-rabbit
     volumes:
-      - ./rabbitmq/etc/definitions.json:/etc/rabbitmq/definitions.json
-      - ./rabbitmq/etc/rabbitmq.conf:/etc/rabbitmq/rabbitmq.conf
-      - ./rabbitmq/etc/enabled_plugins:/etc/rabbitmq/enabled_plugins
-      - ./rabbitmq/logs:/var/log/rabbitmq/log
+      - ./etc/definitions.json:/etc/rabbitmq/definitions.json
+      - ./etc/rabbitmq.conf:/etc/rabbitmq/rabbitmq.conf
+      - ./etc/enabled_plugins:/etc/rabbitmq/enabled_plugins
+      - ./logs:/var/log/rabbitmq/log
     ports:
       #TCP Connection Port.
       #- 5672:5672

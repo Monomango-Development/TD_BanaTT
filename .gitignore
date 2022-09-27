@@ -1,2 +1,4 @@
 
 TDImportCache
+servers/mosquitto/data/*
+servers/mosquitto/log/*
