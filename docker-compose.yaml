@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  rabbitmq:
+    image: rabbitmq:3-management
+    hostname: my-rabbit
+    volumes:
+      - ./rabbitmq/etc/definitions.json:/etc/rabbitmq/definitions.json
+      - ./rabbitmq/etc/rabbitmq.conf:/etc/rabbitmq/rabbitmq.conf
+      - ./rabbitmq/etc/enabled_plugins:/etc/rabbitmq/enabled_plugins
+      - ./rabbitmq/logs:/var/log/rabbitmq/log
+    ports:
+      #TCP Connection Port.
+      #- 5672:5672
+      #MQTT COnnection Port.
+      - 1883:1883
+      #Web Panel PORT
+      - 15672:15672
